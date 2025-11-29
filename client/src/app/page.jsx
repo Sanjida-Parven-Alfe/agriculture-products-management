@@ -3,12 +3,9 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { useApp } from '@/context/providers';
-// Icons
 import { FaShippingFast, FaLeaf, FaUserTie, FaStar, FaQuoteLeft } from 'react-icons/fa';
-// Swiper components and modules
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination, EffectFade } from 'swiper/modules';
-// Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/effect-fade';
@@ -16,7 +13,6 @@ import 'swiper/css/effect-fade';
 export default function Home() {
   const { language } = useApp();
 
-  // --- Data for Sections (Language based) ---
   const t = {
     // Hero
     heroBtn: language === 'en' ? 'Shop Now' : 'এখনই কিনুন',
@@ -77,7 +73,6 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
 
-      {/* ================= 1. HERO SECTION (SWIPER) ================= */}
       <section className="relative h-[600px] md:h-[700px] bg-gray-900">
         <Swiper
           modules={[Autoplay, Pagination, EffectFade]}
@@ -90,7 +85,7 @@ export default function Home() {
         >
           {t.heroSlides.map((slide) => (
             <SwiperSlide key={slide.id} className="relative">
-              {/* Background Image */}
+            
               <Image
                 src={slide.image}
                 alt={slide.title}
