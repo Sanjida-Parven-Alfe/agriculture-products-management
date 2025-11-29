@@ -91,12 +91,11 @@ export default function Home() {
                 alt={slide.title}
                 fill
                 className="object-cover w-full h-full"
-                priority={slide.id === 1} // Load first image faster
+                priority={slide.id === 1} 
               />
-              {/* Dark Overlay for readability */}
+             
               <div className="absolute inset-0 bg-black/60 dark:bg-black/70"></div>
 
-              {/* Text Content */}
               <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4 z-10">
                 <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg max-w-4xl leading-tight">
                   {slide.title}
@@ -115,7 +114,7 @@ export default function Home() {
         </Swiper>
       </section>
 
-      {/* ================= 2. FEATURES SECTION ================= */}
+
       <section className="py-16 px-4 bg-agri-beige dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-agri-olive dark:text-white">
@@ -135,7 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= 3. TRENDING PRODUCTS SECTION ================= */}
+      {/* TRENDING PRODUCTS SECTION */}
       <section className="py-16 px-4 bg-white dark:bg-dark-bg transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-agri-olive dark:text-white">
@@ -169,7 +168,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ================= 4. PROMOTIONAL BANNER SECTION ================= */}
+      {/* PROMOTIONAL BANNER SECTION  */}
       <section 
         className="relative py-24 bg-fixed bg-center bg-cover"
         style={{ backgroundImage: 'url("https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1920&auto=format&fit=crop")' }}
@@ -190,7 +189,7 @@ export default function Home() {
         </div>
       </section>
 
-       {/* ================= 5. TESTIMONIALS SECTION ================= */}
+       {/* 5. TESTIMONIALS SECTION */}
        <section className="py-16 px-4 bg-agri-beige dark:bg-dark-surface transition-colors duration-300">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-12 text-agri-olive dark:text-white">
