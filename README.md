@@ -67,12 +67,12 @@ Follow these steps to run the project locally.
 - Git installed.
 
 ### 1. Clone the Repository
-```bash
-git clone <git@github.com:Sanjida-Parven-Alfe/agriculture-products-management.git>
-cd agriculture-products-management
+    ```bash
+    git clone git@github.com:Sanjida-Parven-Alfe/agriculture-products-management.git
+    cd agriculture-products-management
 
 
-## 🔐 Login Credentials (Mock)
+##🔐 Login Credentials (Mock)
 
 Use these credentials to access the admin dashboard:
 
