@@ -1,9 +1,10 @@
+export const dynamic = "force-dynamic";
+
 import Image from "next/image";
 import Link from "next/link";
 
 async function getProduct(id) {
   try {
-    // আপডেট: লাইভ সার্ভার লিংক
     const res = await fetch(`https://agriculture-products-management.vercel.app/products/${id}`, { cache: 'no-store' });
     if (!res.ok) return null;
     return res.json();
