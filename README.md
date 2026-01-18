@@ -68,5 +68,5 @@ Follow these steps to run the project locally.
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-github-repo-link>
+git clone <git@github.com:Sanjida-Parven-Alfe/agriculture-products-management.git>
 cd agriculture-products-management
