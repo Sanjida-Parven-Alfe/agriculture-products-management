@@ -72,7 +72,7 @@ Follow these steps to run the project locally.
     cd agriculture-products-management
 
 
-##🔐 Login Credentials (Mock)
+### Login Credentials (Mock)
 
 Use these credentials to access the admin dashboard:
 
