@@ -70,3 +70,11 @@ Follow these steps to run the project locally.
 ```bash
 git clone <git@github.com:Sanjida-Parven-Alfe/agriculture-products-management.git>
 cd agriculture-products-management
+
+
+## 🔐 Login Credentials (Mock)
+
+Use these credentials to access the admin dashboard:
+
+- **Email:** `admin@agrimart.com`
+- **Password:** `password123`
