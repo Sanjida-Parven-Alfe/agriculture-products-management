@@ -25,7 +25,8 @@ export default function AddProductForm() {
     };
 
     try {
-        const res = await fetch('http://localhost:5000/products', {
+        // আপডেট: লাইভ সার্ভার লিংক
+        const res = await fetch('https://agriculture-products-management.vercel.app/products', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(productData)

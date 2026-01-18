@@ -3,8 +3,8 @@ import Link from "next/link";
 
 async function getProduct(id) {
   try {
-    // নির্দিষ্ট আইডির ডাটা আনা হচ্ছে
-    const res = await fetch(`http://localhost:5000/products/${id}`, { cache: 'no-store' });
+    // আপডেট: লাইভ সার্ভার লিংক
+    const res = await fetch(`https://agriculture-products-management.vercel.app/products/${id}`, { cache: 'no-store' });
     if (!res.ok) return null;
     return res.json();
   } catch (error) {
@@ -29,7 +29,6 @@ export default async function ProductDetails({ params }) {
         </Link>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-            {/* Image Section */}
             <div className="relative h-[400px] w-full rounded-xl overflow-hidden shadow-md border-4 border-white dark:border-gray-600">
                  <Image 
                     src={product.image || "https://images.unsplash.com/photo-1592841200221-a6898f307baa"} 
@@ -39,7 +38,6 @@ export default async function ProductDetails({ params }) {
                 />
             </div>
 
-            {/* Content Section */}
             <div className="flex flex-col justify-center">
                 {product.category && (
                     <span className="bg-green-100 text-green-800 text-xs font-semibold px-2.5 py-0.5 rounded w-fit mb-2">
@@ -47,19 +45,15 @@ export default async function ProductDetails({ params }) {
                     </span>
                 )}
                 
-                {/* Title */}
                 <h1 className="text-3xl md:text-4xl font-bold text-agri-olive dark:text-white mb-4">
                     {product.title}
                 </h1>
                 
-                {/* Price */}
                 <p className="text-3xl font-bold text-agri-brown mb-6">Price: ৳{product.price}</p>
                 
-                {/* Description */}
                 <div className="prose dark:prose-invert mb-8">
                     <h3 className="text-xl font-semibold mb-2 dark:text-gray-200">Description:</h3>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed text-lg">
-                        {/* আপনার ডাটাবেসের fullDescription এখানে দেখানো হবে */}
                         {product.fullDescription || product.shortDescription}
                     </p>
                 </div>
