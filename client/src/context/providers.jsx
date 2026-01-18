@@ -1,7 +1,7 @@
 "use client";
 
 import { createContext, useContext, useState, useEffect } from "react";
-
+import { SessionProvider } from "next-auth/react";
 
 const AppContext = createContext({
   darkMode: false,
@@ -11,14 +11,12 @@ const AppContext = createContext({
 });
 
 export function AppProvider({ children }) {
-
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState("en");
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
     setMounted(true);
-
     const savedTheme = localStorage.getItem("darkMode");
     const savedLang = localStorage.getItem("language");
 
@@ -52,18 +50,20 @@ export function AppProvider({ children }) {
 
   if (!mounted) {
     return (
-        <AppContext.Provider value={{ darkMode: false, language: "en", toggleTheme: () => {}, toggleLanguage: () => {} }}>
-           
-             <div className="opacity-0">{children}</div> 
-        </AppContext.Provider>
+        <SessionProvider>
+            <AppContext.Provider value={{ darkMode: false, language: "en", toggleTheme: () => {}, toggleLanguage: () => {} }}>
+                <div className="opacity-0">{children}</div>
+            </AppContext.Provider>
+        </SessionProvider>
     );
   }
 
-
   return (
-    <AppContext.Provider value={{ darkMode, toggleTheme, language, toggleLanguage }}>
-      {children}
-    </AppContext.Provider>
+    <SessionProvider>
+        <AppContext.Provider value={{ darkMode, toggleTheme, language, toggleLanguage }}>
+            {children}
+        </AppContext.Provider>
+    </SessionProvider>
   );
 }
 

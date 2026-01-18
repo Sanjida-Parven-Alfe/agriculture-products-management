@@ -11,3 +11,31 @@ body {
   background-color: #1f2115;
   color: #e2e8f0;
 }
+
+@layer components {
+  
+
+  .section-title {
+    @apply text-3xl md:text-4xl font-bold text-center mb-12 text-agri-olive dark:text-white relative;
+  }
+
+
+  .section-title::after {
+    content: '';
+    @apply block w-20 h-1 bg-agri-brown mx-auto mt-3 rounded-full;
+  }
+
+  .card {
+    @apply bg-white dark:bg-dark-surface rounded-xl shadow-md border border-gray-100 dark:border-gray-700 transition duration-300;
+  }
+  
+
+  .nav-link {
+    @apply text-agri-olive dark:text-gray-300 font-semibold hover:text-agri-brown dark:hover:text-white transition text-[17px];
+  }
+
+
+  .mobile-link {
+    @apply block w-full text-agri-olive dark:text-gray-200 font-medium py-2 hover:bg-gray-50 dark:hover:bg-gray-800 rounded;
+  }
+}

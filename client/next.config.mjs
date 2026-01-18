@@ -10,6 +10,14 @@ const nextConfig = {
         protocol: "https",
         hostname: "plus.unsplash.com",
       },
+      {
+        protocol: "https",
+        hostname: "m.media-amazon.com", // এই লাইনটি নতুন যোগ করা হয়েছে
+      },
+      {
+        protocol: "https",
+        hostname: "i.ibb.co", // ভবিষ্যতে imgbb ব্যবহার করলে কাজে লাগবে (অপশনাল)
+      },
     ],
   },
 };
