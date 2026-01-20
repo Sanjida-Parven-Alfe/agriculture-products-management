@@ -74,7 +74,7 @@ Follow these steps to run the project locally.
 
 ### Login Credentials (Mock)
 
-Use these credentials to access the admin dashboard:
+Use these credentials :
 
 - **Email:** `admin@agrimart.com`
 - **Password:** `password123`
